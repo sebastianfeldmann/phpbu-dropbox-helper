@@ -1,0 +1,38 @@
+{
+  "name": "phpbu/phpbu-dropbox-helper",
+  "description": "phpbu Dropbox Helper",
+  "type": "library",
+  "keywords": [
+    "backup",
+    "dropbox",
+    "phpbu"
+  ],
+  "homepage": "https://phpbu.de/",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Sebastian Feldmann",
+      "email": "sebastian@phpbu.de",
+      "role": "lead"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/sebastianfeldmann/phpbu-dropbox-helper/issues"
+  },
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/sebastianfeldmann"
+    }
+  ],
+  "require": {
+    "php": ">=8.0",
+    "ext-dom": "*",
+    "ext-json": "*",
+    "ext-spl": "*",
+    "kunalvarma05/dropbox-php-sdk": "^0.5"
+  },
+  "bin": [
+    "bin/dropbox"
+  ]
+}
