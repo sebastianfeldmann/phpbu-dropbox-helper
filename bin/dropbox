@@ -1,0 +1,38 @@
+#!/usr/bin/env php
+<?php
+
+require_once 'vendor/autoload.php';
+
+use Kunnu\Dropbox\Dropbox;
+use Kunnu\Dropbox\DropboxApp;
+
+echo "Please enter the AppKey: ";
+$handle = fopen ("php://stdin","r");
+$line   = fgets($handle);
+$appKey = trim($line);
+
+echo "Please enter the AppSecret: ";
+$line       = fgets($handle);
+$appSecret  = trim($line);
+$app        = new DropboxApp($appKey, $appSecret);
+$dropbox    = new Dropbox($app);
+$authHelper = $dropbox->getAuthHelper();
+$authUrl    = $authHelper->getAuthUrl(null, [], null, "offline");
+
+echo "\n" . $authUrl . "' - Log in with Dropbox\n\n";
+
+echo "Please enter the code: ";
+$line   = fgets($handle);
+$input  = trim($line);
+
+$app        = new DropboxApp($appKey, $appSecret);
+$client     = new Dropbox($app);
+$authHelper = $client->getAuthHelper();
+$token      = $authHelper->getAccessToken($input);
+
+echo "\nRefresh Token: " . $token->getRefreshToken() . "\n";
+
+
+
+
+
