@@ -28,5 +28,5 @@ You will need both to obtain the necessary refresh token.
 
 ### Composer
 
-    composer install phpbu/phpbu-dropbox-helper
+    composer require --dev phpbu/phpbu-dropbox-helper
     vendor/bin/dropbox
