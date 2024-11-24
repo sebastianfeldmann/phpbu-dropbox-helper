@@ -17,6 +17,10 @@ your Dropbox App Center to obtain the `AppKey` and the `AppSecret`.
 
 You will need both to obtain the necessary refresh token.
 
+Run the script enter both, then you have to open a given URL in your browser and login with your Dropbox account.
+This will authorize the app to access your account. You will receive an `AppCode`.
+Enter this code on the prompt of the script to finally get your `RefreshToken`.
+
 ## Install & Usage
 
 ### Clone
