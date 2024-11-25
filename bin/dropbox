@@ -19,7 +19,9 @@ $dropbox    = new Dropbox($app);
 $authHelper = $dropbox->getAuthHelper();
 $authUrl    = $authHelper->getAuthUrl(null, [], null, "offline");
 
-echo "\n" . $authUrl . "' - Log in with Dropbox\n\n";
+echo "\n" . $authUrl . "' - Open the URL in your Browser and log in with you Dropbox account.\n"
+     . "This will authenticate your app to make changes to your files.\n"
+     . "Copy the code and paste it here to get the RefreshToken.\n\n";
 
 echo "Please enter the code: ";
 $line   = fgets($handle);
